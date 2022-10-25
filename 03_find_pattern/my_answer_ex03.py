@@ -5,12 +5,12 @@ import os
 # with open("README.md", "r") as f:
 #   for line in f:
 #     pattern = re.compile("##+")
-#     result = pattern.findall(line)
+#     result = pattern.match(line.strip())
     
 #     # print(bool(result))
 
 #     if bool(result) == True:
-#       print(line)
+#       print(line.strip())
 
 def main(file_path):
     pattern = re.compile("##.*")
@@ -25,5 +25,5 @@ def main(file_path):
 
 if __name__ == "__main__":
     file_path = os.path.join(os.path.dirname(__file__),"README.md")
+    # print(__file__)
     main(file_path)
-  
